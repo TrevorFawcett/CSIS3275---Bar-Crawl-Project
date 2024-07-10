@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarCrawls Inc.</title>
+
+    <link rel="stylesheet" th:href="@{/css/home.css}"/>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img th:src="@{/css/images/companylogo.png}" alt="BarCrawls Inc.">
+    </div>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a href="#">Become a Franchise</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+        <a th:href="@{signup-page}"> <button>Sign up</button> </a>
+        <a th:href="@{login-page}"> <button>Log in</button> </a>
+    </div>
+</header>
+<section class="hero">
+    <div class="hero-text">
+        <!-- <img class="city-background" th:src="@{/css/images/background-city.png}" alt="BarCrawls Inc."> -->
+        <h1>Fun Day & Night Experiences in Vancouver!</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Where are you going?">
+            <button>Search</button>
+        </div>
+    </div>
+</section>
+<section class="popular-bars">
+    <h2>Most popular bars</h2>
+    <div class="bars">
+        <div class="bar">
+            <img th:src="@{/css/images/thediamond.png}" alt="The Diamond">
+            <div class="bar-info">
+                <h3>The Diamond</h3>
+                <span>★★★★★ (123)</span>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="bar">
+            <img th:src="@{/css/images/narrowlounge.png}" alt="The Narrow Lounge">
+            <div class="bar-info">
+                <h3>The Narrow Lounge</h3>
+                <span>★★★★★ (123)</span>
+                <button>See More</button>
+            </div>
+        </div>
+        <div class="bar">
+            <img th:src="@{/css/images/keeferbar.png}" alt="The Keefer Bar">
+            <div class="bar-info">
+                <h3>The Keefer Bar</h3>
+                <span>★★★★★ (123)</span>
+                <button>Book this tour</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="reasons">
+        <div class="reason">
+            <img th:src="@{/css/images/airplane.png}" alt="Easy & Quick Booking">
+            <h3>Easy & Quick Booking</h3>
+            <p>With Us not only your money is protected but we protect your personal information while buying a ticket.</p>
+        </div>
+        <div class="reason">
+            <img th:src="@{/css/images/price-hand.png}" alt="Best Price Guarantee">
+            <h3>Best Price Guarantee</h3>
+            <p>We work with our partners to get and offer you the most affordable deals and have a delightful experience at their places.</p>
+        </div>
+        <div class="reason">
+            <img th:src="@{/css/images/customerservice.png}" alt="Customer Care 24/7">
+            <h3>Customer Care 24/7</h3>
+            <p>If you need any help to buy tickets or have questions about our listings do not hesitate to contact us!</p>
+        </div>
+    </div>
+</section>
+<section class="franchise">
+    <h2>Are you looking to start or grow your business?</h2>
+    <p>Become a Franchise partner and take your business to the next level!</p>
+    <button>Become a franchise partner</button>
+</section>
+<footer>
+    <div class="footer-content">
+        <div class="about">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standa</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Become a Franchise</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms Of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contact</h3>
+            <p>Phone: +669 4398 4920</p>
+            <p>Email: barcrawls@gmail.com</p>
+            <p>Address: Vancouver BC, Canada</p>
+            <p>Sat - Fri (8:00am-9:00pm)</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

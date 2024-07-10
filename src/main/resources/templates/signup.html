@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarCrawls Inc. - Sign Up</title>
+    <link rel="stylesheet" th:href="@{/css/signup.css}"/>
+    <link rel="stylesheet" th:href="@{/css/home.css}"/>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img th:src="@{/css/images/companylogo.png}" alt="BarCrawls Inc.">
+    </div>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a href="#">Become a Franchise</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+
+    </div>
+</header>
+
+<main>
+    <div class="signup-container">
+        <h2>Sign up</h2>
+        <form action="#" th:action="@{/register}" method="post" th:object="${userNew}">
+            <label for="username">Username *</label>
+            <input type="text" id="username" th:field="*{username}" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="dob">Date of birth *</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label class="terms">
+                <input type="checkbox" name="terms" required>
+                I have read and accept the Terms and Privacy Policy
+            </label>
+
+            <button type="submit" class="submit-button">Sign up</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="about">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+            <a href="#">Read More</a>
+
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Become a Franchise</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms Of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contact</h3>
+            <p>Phone: +669 4398 4920</p>
+            <p>Email: barcrawls@gmail.com</p>
+            <p>Address: Vancouver BC Canada</p>
+            <p>Sat - Fri (9:00am-9:00pm)</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
