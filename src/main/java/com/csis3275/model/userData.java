@@ -8,6 +8,7 @@ import lombok.Setter;
 public class userData {
     private String document_id;
     private String username;
+    private String email;
     private String password;
     private String dob;
 
