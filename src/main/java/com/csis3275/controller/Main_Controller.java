@@ -18,6 +18,8 @@ public class Main_Controller {
 //        return "greeting";
 //    }
 
+
+
     @GetMapping("/")
     public String runHome(Model model){
         return "homepage";
@@ -28,7 +30,13 @@ public class Main_Controller {
         userData userNew = new userData();
         model.addAttribute("userNew",userNew);
 
+
         return "signup";
+    }
+
+    @GetMapping("/login-page")
+    public String loginPage(Model model){
+        return "loginpage";
     }
 
 //    @PostMapping("/register")
