@@ -21,7 +21,7 @@ public class Csis3275Group2024Application {
 
     public static void main(String[] args) throws IOException {
 
-        try {
+        /*try {
             ClassLoader classLoader = Csis3275Group2024Application.class.getClassLoader();
             File file = new File(Objects.requireNonNull(classLoader.getResource("ServiceAccountKey.json")).getFile());
             InputStream serviceAccount = new FileInputStream(file.getAbsolutePath());
@@ -49,13 +49,40 @@ public class Csis3275Group2024Application {
                             .setProjectId(projectId)
                             .setCredentials(GoogleCredentials.getApplicationDefault())
                             .build();
+
             Firestore db = firestoreOptions.getService();
 
         } catch (IOException e) {
             System.out.println("file not found");
         }
+        */
+
+        try {
+            ClassLoader classLoader = Csis3275Group2024Application.class.getClassLoader();
+            File file = new File(Objects.requireNonNull(classLoader.getResource("ServiceAccountKey.json")).getFile());
+            InputStream serviceAccount = new FileInputStream(file.getAbsolutePath());
+
+            FirebaseOptions options = new FirebaseOptions.Builder()
+                    .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+                    .setDatabaseUrl("https://xxxxx.firebaseio.com")
+                    .build();
 
 
+            FirebaseApp app;
+            if (FirebaseApp.getApps().isEmpty()) {
+                app = FirebaseApp.initializeApp(options, "barcrawl-csis3275");
+                System.out.println("initialized Firebase App");
+            } else {
+                app = FirebaseApp.getApps().get(0);
+            }
+
+
+        }
+        catch (IOException e) {
+            System.out.println("ERROR: invalid service account credentials. See README.");
+            System.out.println(e.getMessage());
+
+        }
 
 
         SpringApplication.run(Csis3275Group2024Application.class, args);

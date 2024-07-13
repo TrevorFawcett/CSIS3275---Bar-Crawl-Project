@@ -34,11 +34,13 @@ public class userDataService {
 
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+                    .setDatabaseUrl("https://xxxxx.firebaseio.com")
                     .build();
 
             FirebaseApp app;
             if (FirebaseApp.getApps().isEmpty()) {
-
+                app = FirebaseApp.initializeApp(options, "barcrawl-csis3275");
+                System.out.println("initialized Firebase App");
             } else {
                 app = FirebaseApp.getApps().get(0);
                 System.out.println(app.toString());
@@ -58,6 +60,7 @@ public class userDataService {
     {
         FirebaseApp app = getApp();
         Firestore dbFireStore = FirestoreClient.getFirestore(app);
+
         ApiFuture<WriteResult> collectionsApiFuture = dbFireStore.collection("user_data").document(userdata.getUsername()).set(userdata);
 
         return collectionsApiFuture.get().getUpdateTime().toString();
