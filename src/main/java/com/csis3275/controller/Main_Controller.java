@@ -36,7 +36,7 @@ public class Main_Controller {
 
     @GetMapping("/login-page")
     public String loginPage(Model model){
-        return "loginpage";
+        return "login2";
     }
 
 //    @PostMapping("/register")
