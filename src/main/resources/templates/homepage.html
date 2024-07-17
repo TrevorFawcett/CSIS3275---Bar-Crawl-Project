@@ -30,8 +30,10 @@
         <!-- <img class="city-background" th:src="@{/css/images/background-city.png}" alt="BarCrawls Inc."> -->
         <h1>Fun Day & Night Experiences in Vancouver!</h1>
         <div class="search-bar">
-            <input type="text" placeholder="Where are you going?">
-            <button>Search</button>
+            <form action="#" th:action="@{/search}" method="post" th:object="${searchQuery}">
+                <input type="text" placeholder="Where are you going?" id="city-search" th:field="*{userInput}">
+                <button type="submit" class="search-button">Sign up</button>
+            </form>
         </div>
     </div>
 </section>

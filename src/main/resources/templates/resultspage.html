@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BarCrawls Inc.</title>
+
+  <link rel="stylesheet" th:href="@{/css/searchResults.css}"/>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img th:src="@{/css/images/companylogo.png}" alt="BarCrawls Inc.">
+  </div>
+  <nav>
+    <ul>
+      <li><a th:href="@{/}">Home</a></li>
+      <li><a href="#">Become a Franchise</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+  </nav>
+  <div class="auth-buttons">
+    <a th:href="@{signup-page}"> <button>Sign up</button> </a>
+    <a th:href="@{login-page}"> <button>Log in</button> </a>
+  </div>
+</header>
+
+<!--<img th:src="@{${'/img/' + players.id +'_'+ players.name + '.png'}}" width="120"/>-->
+
+<div class="results-table" th:if="${ not#lists.isEmpty(displayBars)}">
+  <table class="results-table-item">
+
+
+    <tr th:each="bar : ${displayBars}">
+      <td>
+        <img th:src="@{${'/css/images/' + bar.image}}" width="120"/>
+        <p th:text="${bar.barName}"></p>
+        <p th:text="${bar.Address}"></p>
+        <p th:text="${bar.City}"></p>
+        <p th:text="${bar.phoneNumber}"></p>
+        <p th:text="${bar.website}"></p>
+      </td>
+    </tr>
+
+    </table>
+</div>
+
+</body>
+</html>

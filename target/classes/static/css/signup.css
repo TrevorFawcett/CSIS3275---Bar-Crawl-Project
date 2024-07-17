@@ -109,3 +109,11 @@ form .submit-button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.alert-danger{
+    background-color: #ff1312;
+    height: 100px;
+    font-size: large;
+    text-align: center;
+    width: 100%;
+}

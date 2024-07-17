@@ -25,7 +25,9 @@
     </div>
 </header>
 
+<div class="alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
 <main>
+
     <div class="signup-container">
         <h2>Sign up</h2>
         <form action="#" th:action="@{/register}" method="post" th:object="${userNew}">
@@ -50,6 +52,7 @@
         </form>
     </div>
 </main>
+
 
 <footer>
     <div class="footer-content">
