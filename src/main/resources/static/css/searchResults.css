@@ -34,25 +34,97 @@ nav a {
     margin-left: 1rem;
     padding: 0.5rem 1rem;
     border: none;
-    background-color: #007bff;
+    background-color: #003366;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
 }
 
 .results-table {
-    margin-left: 20%;
-    margin-right: 20%;
-
-
+    margin: 2rem auto;
+    width: 80%;
+    border-collapse: collapse;
 }
 
-.results-table-item td{
-
-    border: 5px solid black;
-    padding: 20px;
-
-    text-align: center;
-
+.results-table-item {
+    width: 100%;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.results-table-item tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.results-table-item td {
+    padding: 1rem;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #ddd;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+}
+
+.image-content {
+    flex-shrink: 0;
+    padding-right: 1rem;
+}
+
+.image-content img {
+    display: block;
+    max-width: 200px; /* Increased size */
+    height: auto;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-content div {
+    width: 30%;
+}
+
+.footer-content h3 {
+    margin-top: 0;
+}
+
+.footer-content a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 0.5rem;
+}

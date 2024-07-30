@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BarCrawls Inc.</title>
+    <link rel="stylesheet" th:href="@{/css/AboutUs.css}"/>
+    <link rel="stylesheet" th:href="@{/css/home.css}"/>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img th:src="@{/css/images/companylogo.png}" alt="BarCrawls Inc.">
+    </div>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{Franchise}">Become a Franchise</a></li>
+            <li><a th:href="@{AboutUs}">About</a></li>
+            <li><a th:href="@{ContactUs}">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+        <a th:href="@{signup-page}"> <button>Sign up</button> </a>
+        <a th:href="@{login-page}"> <button>Log in</button> </a>
+    </div>
+</header>
+
+<section class="about-hero">
+    <div class="about-hero-text">
+        <h1>Our mission</h1>
+        <p>We want to help people to create connections and discover the bar life around Canada .</p>
+    </div>
+</section>
+
+<section class="about-content">
+    <div class="about-section">
+        <p>At BarCrawl, we're dedicated to enhancing your nightlife adventures. Founded by a team of passionate students, our platform was born out of a desire to showcase the vibrant bar scene around Vancouver. Whether you’re a seasoned bar crawler or new to the concept, our carefully planned events cater to everyone, offering a diverse range of venues and experiences.</p>
+        <p>What sets us apart is our commitment to quality and safety. Each bar crawl is thoughtfully organized to ensure participants have a fantastic time in a responsible manner. We work closely with local establishments to bring you exclusive deals and insider access, making every crawl not just a night out, but a journey of discovery.</p>
+    </div>
+    <div class="about-image">
+        <img src="css/images/barVolo.png" alt="Bar Crawl">
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="about">
+            <p>BarCrawls Inc. is your go-to platform for unforgettable bar hopping experiences in Vancouver.
+                We partner with the best local bars and pubs to bring you exclusive deals and a safe, enjoyable night out.
+                Join us to explore new venues, meet new people, and create lasting memories.<</p>
+
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{Franchise}">Become a Franchise</a></li>
+                <li><a th:href="@{AboutUs}">About</a></li>
+                <li><a th:href="@{ContactUs}">Contact us</a></li>
+
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Contact</h3>
+            <p>Phone: +669 4398 4920</p>
+            <p>Email: barcrawls@gmail.com</p>
+            <p>Address: Vancouver BC, Canada</p>
+            <p>Sat - Fri (8:00am-9:00pm)</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

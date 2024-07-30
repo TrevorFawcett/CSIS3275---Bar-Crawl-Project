@@ -15,9 +15,9 @@
     <nav>
         <ul>
             <li><a th:href="@{/}">Home</a></li>
-            <li><a href="#">Become a Franchise</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a th:href="@{Franchise}">Become a Franchise</a></li>
+            <li><a th:href="@{AboutUs}">About</a></li>
+            <li><a th:href="@{ContactUs}">Contact us</a></li>
         </ul>
     </nav>
     <div class="auth-buttons">
@@ -28,7 +28,7 @@
 <section class="hero">
     <div class="hero-text">
         <!-- <img class="city-background" th:src="@{/css/images/background-city.png}" alt="BarCrawls Inc."> -->
-        <h1>Fun Day & Night Experiences in Vancouver!</h1>
+        <h1>Fun Day & Night Experiences in Canada!</h1>
         <div class="search-bar">
             <form action="#" th:action="@{/search}" method="post" th:object="${searchQuery}">
                 <input type="text" placeholder="Where are you going?" id="city-search" th:field="*{userInput}">
@@ -61,7 +61,7 @@
             <div class="bar-info">
                 <h3>The Keefer Bar</h3>
                 <span>★★★★★ (123)</span>
-                <button>Book this tour</button>
+                <button>see More</button>
             </div>
         </div>
     </div>
@@ -89,22 +89,23 @@
 <section class="franchise">
     <h2>Are you looking to start or grow your business?</h2>
     <p>Become a Franchise partner and take your business to the next level!</p>
-    <button>Become a franchise partner</button>
+    <button><a th:href="@{Franchise}">Become a franchise partner</a></button>
 </section>
 <footer>
     <div class="footer-content">
         <div class="about">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standa</p>
-            <a href="#">Read More</a>
+            <p>BarCrawls Inc. is your go-to platform for unforgettable bar hopping experiences in Vancouver.
+                We partner with the best local bars and pubs to bring you exclusive deals and a safe, enjoyable night out.
+                Join us to explore new venues, meet new people, and create lasting memories.<</p>
+
         </div>
         <div class="quick-links">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Become a Franchise</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Terms Of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{Franchise}">Become a Franchise</a></li>
+                <li><a th:href="@{AboutUs}">About</a></li>
+                <li><a th:href="@{ContactUs}">Contact us</a></li>
             </ul>
         </div>
         <div class="contact">

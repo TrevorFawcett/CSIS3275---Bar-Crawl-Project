@@ -1,3 +1,4 @@
+/* Common Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -40,53 +41,8 @@ nav a {
     cursor: pointer;
 }
 
-.results-table {
-    margin: 2rem auto;
-    width: 80%;
-    border-collapse: collapse;
-}
-
-.results-table-item {
-    width: 100%;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.results-table-item tr {
-    border-bottom: 1px solid #ddd;
-}
-
-.results-table-item td {
-    padding: 1rem;
-    text-align: left;
-    vertical-align: top;
-    border: 1px solid #ddd;
-}
-
-.result-item {
-    display: flex;
-    align-items: center;
-}
-
-.image-content {
-    flex-shrink: 0;
-    padding-right: 1rem;
-}
-
-.image-content img {
-    display: block;
-    max-width: 200px; /* Increased size */
-    height: auto;
-}
-
-.text-content {
-    flex: 1;
-}
-
-.text-content p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    color: #333;
+.auth-buttons a {
+    text-decoration: none;
 }
 
 footer {
@@ -127,4 +83,47 @@ footer {
 
 .footer-content ul li {
     margin-bottom: 0.5rem;
+}
+
+/* About Page Specific Styles */
+.about-hero {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.about-hero-text h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.about-hero-text p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.about-section {
+    width: 45%;
+}
+
+.about-section p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.about-image {
+    width: 45%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
 }

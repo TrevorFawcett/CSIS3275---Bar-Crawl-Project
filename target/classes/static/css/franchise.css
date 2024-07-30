@@ -40,53 +40,60 @@ nav a {
     cursor: pointer;
 }
 
-.results-table {
-    margin: 2rem auto;
-    width: 80%;
-    border-collapse: collapse;
+main {
+    padding: 2rem;
 }
 
-.results-table-item {
-    width: 100%;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.franchise-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
-.results-table-item tr {
-    border-bottom: 1px solid #ddd;
+.franchise-text {
+    flex: 1;
 }
 
-.results-table-item td {
-    padding: 1rem;
-    text-align: left;
-    vertical-align: top;
-    border: 1px solid #ddd;
+.franchise-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.result-item {
+.franchise-info p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.franchise-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.franchise-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.step {
     display: flex;
     align-items: center;
 }
 
-.image-content {
-    flex-shrink: 0;
-    padding-right: 1rem;
+.step-number {
+    font-size: 2rem;
+    color: #007bff;
+    margin-right: 1rem;
 }
 
-.image-content img {
-    display: block;
-    max-width: 200px; /* Increased size */
+.franchise-image img {
+    max-width: 100%;
     height: auto;
-}
-
-.text-content {
+    border-radius: 8px;
     flex: 1;
-}
-
-.text-content p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    color: #333;
 }
 
 footer {
@@ -127,4 +134,16 @@ footer {
 
 .footer-content ul li {
     margin-bottom: 0.5rem;
+}
+
+.social-media {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
 }

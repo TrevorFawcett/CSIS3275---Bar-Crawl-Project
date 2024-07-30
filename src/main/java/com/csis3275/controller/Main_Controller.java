@@ -93,6 +93,30 @@ public class Main_Controller {
     }
 
 
+    @GetMapping("/AboutUs")
+    public String AboutUs(Model model) {
+
+
+        return "AboutUs";
+    }
+    @GetMapping("/Franchise")
+    public String Franchise(Model model) {
+
+
+        return "Franchise";
+    }
+    @GetMapping("/ContactUs")
+    public String ContactUs(Model model) {
+
+
+        return "ContactUs";
+    }
+
+
+
+
+
+
 
 
 }

@@ -15,9 +15,9 @@
     <nav>
         <ul>
             <li><a th:href="@{/}">Home</a></li>
-            <li><a href="#">Become a Franchise</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a th:href="@{Franchise}">Become a Franchise</a></li>
+            <li><a th:href="@{AboutUs}">About</a></li>
+            <li><a th:href="@{ContactUs}">Contact us</a></li>
         </ul>
     </nav>
     <div class="auth-buttons">
@@ -52,31 +52,26 @@
         </form>
     </div>
 </main>
-
-
 <footer>
     <div class="footer-content">
         <div class="about">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-            <a href="#">Read More</a>
-
+            <p>BarCrawls Inc. is your go-to platform for unforgettable bar hopping experiences in Vancouver. We partner with the best local bars and pubs to bring you exclusive deals and a safe, enjoyable night out. Join us to explore new venues, meet new people, and create lasting memories.</p>
         </div>
         <div class="quick-links">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Become a Franchise</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Terms Of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{Franchise}">Become a Franchise</a></li>
+                <li><a th:href="@{AboutUs}">About</a></li>
+                <li><a th:href="@{ContactUs}">Contact us</a></li>
             </ul>
         </div>
         <div class="contact">
             <h3>Contact</h3>
             <p>Phone: +669 4398 4920</p>
             <p>Email: barcrawls@gmail.com</p>
-            <p>Address: Vancouver BC Canada</p>
-            <p>Sat - Fri (9:00am-9:00pm)</p>
+            <p>Address: Vancouver BC, Canada</p>
+            <p>Sat - Fri (8:00am-9:00pm)</p>
         </div>
     </div>
 </footer>

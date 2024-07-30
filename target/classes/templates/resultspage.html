@@ -26,25 +26,53 @@
   </div>
 </header>
 
-<!--<img th:src="@{${'/img/' + players.id +'_'+ players.name + '.png'}}" width="120"/>-->
-
 <div class="results-table" th:if="${ not#lists.isEmpty(displayBars)}">
   <table class="results-table-item">
-
-
     <tr th:each="bar : ${displayBars}">
       <td>
-        <img th:src="@{${'/css/images/' + bar.image}}" width="120"/>
-        <p th:text="${bar.barName}"></p>
-        <p th:text="${bar.Address}"></p>
-        <p th:text="${bar.City}"></p>
-        <p th:text="${bar.phoneNumber}"></p>
-        <p th:text="${bar.website}"></p>
+        <div class="result-item">
+          <div class="image-content">
+            <img th:src="@{${'/css/images/' + bar.image}}" alt="Bar image"/>
+          </div>
+          <div class="text-content">
+            <p th:text="${bar.barName}"></p>
+            <p th:text="${bar.Address}"></p>
+            <p th:text="${bar.City}"></p>
+            <p th:text="${bar.phoneNumber}"></p>
+            <p th:text="${bar.website}"></p>
+          </div>
+        </div>
       </td>
     </tr>
-
-    </table>
+  </table>
 </div>
+
+
+<footer>
+  <div class="footer-content">
+    <div class="about">
+      <p>BarCrawls Inc. is your go-to platform for unforgettable bar hopping experiences in Vancouver.
+        We partner with the best local bars and pubs to bring you exclusive deals and a safe, enjoyable night out.
+        Join us to explore new venues, meet new people, and create lasting memories.</p>
+    </div>
+    <div class="quick-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{Franchise}">Become a Franchise</a></li>
+        <li><a th:href="@{AboutUs}">About</a></li>
+        <li><a th:href="@{ContactUs}">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="contact">
+      <h3>Contact</h3>
+      <p>Phone: +669 4398 4920</p>
+      <p>Email: barcrawls@gmail.com</p>
+      <p>Address: Vancouver BC, Canada</p>
+      <p>Sat - Fri (8:00am-9:00pm)</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

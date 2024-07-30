@@ -41,7 +41,7 @@ button {
 }
 
 button.sign-up {
-    background-color: #007bff;
+    background-color: #003366;
     color: #fff;
 }
 
@@ -103,7 +103,7 @@ form .terms input {
 form .submit-button {
     width: 100%;
     padding: 0.5rem;
-    background-color: #007bff;
+    background-color: #003366;
     color: #fff;
     border: none;
     border-radius: 5px;
