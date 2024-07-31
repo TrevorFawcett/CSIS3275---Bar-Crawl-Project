@@ -1,6 +1,8 @@
 package com.csis3275;
 
+import com.csis3275.service.ActiveUserStore;
 import com.csis3275.service.FirebaseConfig;
+import com.csis3275.service.userDataService;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.FirestoreOptions;
@@ -21,8 +23,12 @@ import java.util.logging.Logger;
 public class Csis3275Group2024Application {
 
     public static FirebaseApp mainApp;
+    public static userDataService userService;
+    public static ActiveUserStore userStore;
 
     public static void main(String[] args) throws IOException {
+            userService = new userDataService();
+            userStore = new ActiveUserStore();
 
         /*try {
             ClassLoader classLoader = Csis3275Group2024Application.class.getClassLoader();

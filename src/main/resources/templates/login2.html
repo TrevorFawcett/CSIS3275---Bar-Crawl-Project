@@ -102,7 +102,7 @@
             console.log('Logged in:', userCredential.user);
             // Redirect or show a success message
 
-            onAuthStateChanged(auth, async (user) => {
+             await onAuthStateChanged(auth, async (user) => {
                 if (user) {
                     const token = await getIdToken(user);
                     console.log(token);
@@ -118,7 +118,7 @@
 
 
 
-
+            window.location.href = '/login'; // Redirect to home page or another page
 
         } catch (error) {
             console.error('Error logging in:', error);
@@ -127,7 +127,7 @@
     });
 
 
-   // window.location.href = '/'; // Redirect to home page or another page
+
 
 
 
