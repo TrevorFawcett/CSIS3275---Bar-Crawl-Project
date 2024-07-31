@@ -1,9 +1,11 @@
 package com.csis3275.service;
 
+import com.csis3275.model.FBUserData;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.UserRecord;
+import com.google.firebase.iid.FirebaseInstanceId;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -28,4 +30,5 @@ public class FirebaseUserService {
     }
 
     // Add more methods as needed for user management
+
 }

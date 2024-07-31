@@ -90,6 +90,7 @@ public class Csis3275Group2024Application {
 
         mainApp = FirebaseConfig.firebaseApp();
 
+
         SpringApplication.run(Csis3275Group2024Application.class, args);
     }
 

@@ -6,6 +6,9 @@
     <title>DB Login - BarCrawls Inc.</title>
     <link rel="stylesheet" th:href="@{/css/login.css}"/>
     <link rel="stylesheet" th:href="@{/css/home.css}"/>
+    <script src=
+                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
 </head>
 <body>
 <header>
@@ -63,6 +66,17 @@
 <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js';
     import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js';
+    import {getIdToken, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js';
+
+    function callAjax(postObj){
+        jQuery.ajax(
+            {
+                type: "POST",
+                url: "/yourURL",
+                contentType: "application/json",
+                data: JSON.stringify(postObj)
+            })
+    }
 
     const firebaseConfig = {
         apiKey: "AIzaSyACu_x4aKSo3bbnWri88P57kE09MVpb9Qo",
@@ -84,14 +98,40 @@
 
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
+
             console.log('Logged in:', userCredential.user);
             // Redirect or show a success message
-            window.location.href = '/'; // Redirect to home page or another page
+
+            onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    const token = await getIdToken(user);
+                    console.log(token);
+
+                    let postObj = {
+               id: token
+           }
+           callAjax(postObj);
+
+                }
+            });
+
+
+
+
+
+
         } catch (error) {
             console.error('Error logging in:', error);
             alert('Login failed: ' + error.message); // Show an error message
         }
     });
+
+
+   // window.location.href = '/'; // Redirect to home page or another page
+
+
+
+
 </script>
 
 </body>

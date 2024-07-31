@@ -39,8 +39,11 @@ public class Main_Controller {
         searchQuery q = new searchQuery();
         model.addAttribute("searchQuery", q);
 
+
         return "homepage";
     }
+
+
 
     @GetMapping("/signup-page")
     public String signUpPage(Model model) {
@@ -53,8 +56,12 @@ public class Main_Controller {
 
     @GetMapping("/login-page")
     public String loginPage(Model model) {
+
         return "login2";
     }
+
+
+
 
     @PostMapping("/search")
     public String searchResults(@ModelAttribute("searchQuery") searchQuery input, Model model) throws ExecutionException, InterruptedException {
